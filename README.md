@@ -2,8 +2,12 @@
 
 platform needed : remix ide : https://remix.ethereum.org/
 
-create a new file <any_name.sol>
-go to deploy and run transaction 
+How to execute code
+-------------------
+go to the remix ide.
+create a new file <any_name.sol> (MyContract1.sol)
+copy paste the above code into the file.
+go to deploy and run transaction.
 
 there are 3 environment where we can deploy the contract 
  1) Javascript VM : it used broswer based blockchain and wallet. easy to deploy. but everything is gone when refresh
