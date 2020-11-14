@@ -1,6 +1,10 @@
 pragma solidity >=0.5.11 <0.7.0;
 contract ExceptionExample {
-
+/*
+Here we could use asserts to make sure we don’t roll over – in both directions! When withdrawals
+happen, we don’t suddenly have more balance available than before and when deposits happen that the
+balance after depositing is really higher than before
+*/
  mapping(address => uint64) public balanceReceived;
 
  function receiveMoney() public payable {
