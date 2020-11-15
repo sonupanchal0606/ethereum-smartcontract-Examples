@@ -1,3 +1,8 @@
+*
+we can also create Owned.sol file and include here with 
+import "./Owned.sol";
+*/
+
 pragma solidity ^0.5.11;
 contract Owned {
  address owner;
@@ -16,20 +21,21 @@ contract InheritanceModifierExample is Owned {
 
  mapping(address => uint) public tokenBalance;
 
- address owner;
+ //address owner;
  uint tokenPrice = 1 ether;
 
  constructor() public {
- owner = msg.sender;
+ //owner = msg.sender;
  tokenBalance[owner] = 100;
  }
 
  function createNewToken() public onlyOwner {
+ //require(msg.sender == owner, "You are not allowed");
  tokenBalance[owner]++;
  }
  
- function burnToken() public {
- require(msg.sender == owner, "You are not allowed");
+ function burnToken() public onlyOwner {
+ //require(msg.sender == owner, "You are not allowed");
  tokenBalance[owner]--;
  }
 
