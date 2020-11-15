@@ -1,6 +1,11 @@
 pragma solidity ^0.6.0;
 
 /*
+ATTENTION! The fallback function has changed in Solidity 0.6. It is no longer a no-name function, it is
+now two functions, depending on the use case:
+fallback () …
+receive () …
+
 UPDATE Solidity 0.6: The “fallback” function is called when no other function matches and no money is sent along. 
 The “receive” function matches when no other function matches and money is sent along.
 
