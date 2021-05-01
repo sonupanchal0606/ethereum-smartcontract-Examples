@@ -50,6 +50,11 @@ function convertWeiToEth(uint _amountInWei) public pure returns(uint) {
 return _amountInWei / 1 ether;
 }
 
+/*
+UPDATE Solidity 0.6:
+The “fallback” function is called when no other function matches and no money is sent along.
+The “receive” function matches when no other function matches and money is sent along.
+*/
 receive () external payable {
 receiveMoney();
 }
