@@ -1,4 +1,4 @@
-*
+/*
 we can also create Owned.sol file and include here with 
 import "./Owned.sol";
 */
